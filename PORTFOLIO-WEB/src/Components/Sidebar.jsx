@@ -54,14 +54,14 @@ const Sidebar = () => {
     return (
         <motion.div
             animate={open ? "open" : "closed"}
-            className="flex flex-col  items-center justify-center fixed z-[99] bg-white text-black"
+            className="flex flex-col  items-center justify-center fixed z-[999] bg-white text-black"
         >
             <motion.div
                 variants={variants}
                 className="fixed top-0 left-0 md:w-80 w-full   bg-white">
                 <motion.div
                     variants={linkVariants}
-                    className=" w-80 min-h-[590px] z-50 absolute flex flex-col bg-white  justify-center items-center md:items-start gap-4">
+                    className=" w-full md:w-80 min-h-[590px] z-50 absolute flex flex-col bg-white  justify-center items-center md:items-start gap-4">
                     {sideBarlinkItems?.map((link) => (
                         <motion.a
                             whileHover={{ scale: 1.2 }}
@@ -74,7 +74,7 @@ const Sidebar = () => {
             </motion.div>
             <button
                 onClick={() => setOpen(prev => !prev)}
-                className="w-12 h-12 fixed rounded-lg bg-transparent left-5 top-2">
+                className="w-12 h-12 fixed border-none rounded-lg bg-transparent left-5 top-2">
                 {
                     open ? <RxCross2 className="h-6 w-6" /> : <RxHamburgerMenu className="h-6 w-6" />
                 }
