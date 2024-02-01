@@ -1,20 +1,28 @@
+import { useRef } from 'react'
 import mountains from '../assets/mountains.png'
-import planets from '../assets/planets.png'
 import stars from '../assets/stars.png'
-import { motion } from 'framer-motion'
+import { delay, motion, useScroll, useTransform } from 'framer-motion'
 
-const Parallax = ({ heading, gradient }) => {
+const Parallax = ({ heading, gradient, bg }) => {
+    const ref = useRef()
+    const { scrollYProgress } = useScroll({
+        target: ref,
+        offset: ['start start', 'end start']
+    })
+    const yText = useTransform(scrollYProgress, [0, 1], ['0%', '700%'])
+    const yBg = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
     return (
         <div
+            ref={ref}
             style={{
                 background: `linear-gradient(180deg,#111132,${gradient})`
             }}
-            className="w-full relative h-full flex items-center justify-center"
+            className="w-full relative overflow-hidden h-full flex items-center justify-center"
         >
-            <h1 className="text-8xl">{heading}</h1>
-            <div style={{ background: `url(${mountains}) no-repeat center/cover` }} className="mountains absolute h-full w-full  "></div>
-            <div style={{ background: `url(${planets}) no-repeat center/cover` }} className="mountains absolute h-full w-full  "></div>
-            <div style={{ background: `url(${stars}) no-repeat center/cover` }} className="mountains absolute h-full w-full  "></div>
+            <motion.h1 style={{ y: yText }} className="text-8xl font-bold">{heading}</motion.h1>
+            <motion.div style={{ background: `url(${mountains}) no-repeat center/cover` }} className="mountains z-[3] absolute h-full w-full  "></motion.div>
+            <motion.div style={{ background: `url(${bg}) no-repeat center/cover`, y: yBg }} className="mountains z-[2] absolute h-full w-full  "></motion.div>
+            <motion.div style={{ background: `url(${stars}) no-repeat center/cover`, x: yBg }} className="mountains z-[1] absolute h-full w-full  "></motion.div>
         </div>
     )
 }
