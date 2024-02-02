@@ -3,7 +3,7 @@ export const sideBarlinkItems = [
     "About",
     "Skills",
     "Services",
-    "Portfolio",
+    "Projects",
     "Contacts"
 ]
 

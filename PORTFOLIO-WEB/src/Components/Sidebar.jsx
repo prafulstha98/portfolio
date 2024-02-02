@@ -68,6 +68,7 @@ const Sidebar = () => {
                             whileTap={{ scale: .8 }}
                             className="font-bold text-xl uppercase  shadow-xl px-4 py-1 w-60 text-gray-700"
                             variants={linkItemVariants}
+                            onClick={() => setOpen(false)}
                             href={`#${link.toLowerCase()}`} key={link}>{link}</motion.a>
                     ))}
                 </motion.div>

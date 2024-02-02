@@ -1,6 +1,7 @@
 import Navbar from "./Components/Navbar";
 import Parallax from "./Components/Parallax";
 import Hero from "./Pages/Hero";
+import Projects from "./Pages/Projects";
 import Services from "./Pages/Services";
 import planets from './assets/planets.png'
 import sun from './assets/sun.png'
@@ -34,6 +35,10 @@ const App = () => {
       />
     </section>
     <section id="about">About</section>
+
+    <section id="projects">
+      <Projects />
+    </section>
     <section id="skills">skills</section>
   </div>;
 };
