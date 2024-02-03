@@ -48,7 +48,7 @@ const Services = () => {
     return (
         <motion.div
             variants={variants} initial="initial"
-            // animate={isInView && "animate"}
+            animate={isInView && "animate"}
             whileInView={"animate"}
             ref={ref}
             style={{ background: 'linear-gradient(180deg,#0c0c1d,#111132)' }} className='h-full flex p-2  flex-col justify-between' >
