@@ -2,6 +2,24 @@ import { motion } from 'framer-motion'
 import { useState } from 'react'
 const Test = () => {
     const [open, setOpen] = useState(false)
+    const anotherVariants = {
+        visible: ({
+            opacity: 1,
+            // x: 100,
+            transition: {
+                staggerChildren: 1,
+                delay: .5,
+                // duration: 2,
+                // type: 'spring',
+                stiffness: 200,
+                // damping: 2000
+            }
+        }),
+        hidden: {
+            opacity: 0,
+            // transition: { duration: 2 }
+        }
+    }
     const variants = {
         visible: (i) => ({
             opacity: 1,
