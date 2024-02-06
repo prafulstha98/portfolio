@@ -35,11 +35,10 @@ const App = () => {
         bg={sun}
       />
     </section>
+    <Projects />
+
     <section id="about">About</section>
 
-    <section id="projects">
-      <Projects />
-    </section>
     <section id="skills">skills</section>
     <section id="contacts">
       <Contacts />
