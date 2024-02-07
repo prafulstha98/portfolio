@@ -1,6 +1,6 @@
 const Contacts = () => {
     return (
-        <div className="contact  h-full max-w-6xl m-auto flex items-center  gap-10">
+        <div className="contact  h-full max-w-6xl m-auto flex flex-col md:flex-row items-center  gap-10">
             <div className="textContainer flex flex-col gap-8 flex-1">
                 <h1 className="text-7xl leading-[90px] font-bold">Lets Work Together</h1>
                 <div className="item">

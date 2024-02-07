@@ -14,7 +14,7 @@ const SingleItem = ({ projectItems }) => {
     return (
         <section >
             <div className="overflow-hidden flex items-center h-full w-full justify-center">
-                <div className="max-w-6xl h-full m-auto items-center justify-center flex gap-10">
+                <div className="max-w-6xl h-full m-auto items-center justify-center flex-col md:flex-row flex gap-10">
                     <motion.div style={{ opacity }} ref={ref} className="flex-1 h-1/2 hover:rounded-lg overflow-hidden ">
                         <img src={projectItems.img} className="h-full transition-all delay-75 end-auto  hover:scale-110 w-full object-cover" alt="Project Image" />
                     </motion.div>
