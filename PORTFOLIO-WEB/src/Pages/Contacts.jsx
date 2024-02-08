@@ -1,7 +1,29 @@
+import emailjs from '@emailjs/browser';
 import { motion, useInView } from 'framer-motion'
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 const Contacts = () => {
     const ref = useRef()
+    const formRef = useRef();
+    const [error, setError] = useState(false)
+    const [success, setSuccess] = useState(false)
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs
+            .sendForm('service_3di3m7q', 'template_4xxvkvo', formRef.current, {
+                publicKey: 'L9QGZIc1lnT8XMoSG',
+            })
+            .then(
+                () => {
+                    setSuccess(true)
+                    formRef.current.reset();
+                },
+                () => {
+                    setError(true)
+                },
+            );
+    };
+
     const isInView = useInView(ref, { margin: "-100px" })
     const variants = {
         initial: {
@@ -44,6 +66,11 @@ const Contacts = () => {
             }
         }
     }
+
+    setTimeout(() => {
+        setError(false)
+        setSuccess(false)
+    }, 2000);
     return (
         <motion.div ref={ref} variants={variants} initial="initial" whileInView="animate" className="contact  h-full max-w-6xl m-auto flex flex-col md:flex-row items-center  gap-10">
             <motion.div variants={variants} className="textContainer flex flex-col gap-8 flex-1">
@@ -60,9 +87,10 @@ const Contacts = () => {
                     <h1>Phone</h1>
                     <span>+977 9860938293</span>
                 </motion.div> */}
+
             </motion.div>
             <div className="formContainer  relative stroke-blue-500 flex-1" >
-                <motion.div className=' absolute h-ful w-full'
+                <motion.div className=' -z-10 absolute h-ful w-full'
                     initial={{ opacity: 1 }}
                     whileInView={{ opacity: 0 }}
                     transition={{
@@ -82,11 +110,16 @@ const Contacts = () => {
                     </svg>
                 </motion.div>
 
-                <motion.form variants={formVariants} className="flex flex-col gap-2 ">
-                    <motion.input className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="text" required placeholder="Name" />
-                    <motion.input className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="email" required placeholder="Email" />
-                    <motion.textarea className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" rows="8" placeholder="Message"></motion.textarea>
-                    <button className="bg-orange-500  transition-all delay-200 ease-in-out py-2 px-6 rounded-lg text-lg hover:bg-white hover:text-black font-semibold">Submit</button>
+                <motion.form ref={formRef} variants={formVariants} onSubmit={sendEmail} className="flex  flex-col gap-2 ">
+                    <input className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="text" required placeholder="Name" name='name' />
+                    <input className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="email" required placeholder="Email" name="email" />
+                    <textarea className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" rows="8" placeholder="Message" name="message"></textarea>
+                    <button type='submit' className="bg-orange-500  transition-all delay-200 ease-in-out py-2 px-6 rounded-lg text-lg hover:bg-white hover:text-black font-semibold">Submit</button>
+
+                    <p className={`text-center font-lg h-4 ${error ? 'text-red-800' : 'text-green-700'}`}>
+                        {error && 'Error while sending the mail...!!!'}
+                        {success && 'Mail send successfully...!!!'}
+                    </p>
                 </motion.form>
             </div>
         </motion.div >
