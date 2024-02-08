@@ -1,6 +1,6 @@
 import { FaGithub } from "react-icons/fa";
 import { CiGlobe } from "react-icons/ci";
-import { useScroll, motion, useTransform, transform } from "framer-motion"
+import { useScroll, motion, useTransform } from "framer-motion"
 import { useRef } from "react"
 import { Link } from "react-router-dom"
 const SingleItem = ({ projectItems }) => {
