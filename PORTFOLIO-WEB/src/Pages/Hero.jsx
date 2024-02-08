@@ -41,7 +41,7 @@ const Hero = () => {
     return (
         <div className="h-full md:h-[82vh]   overflow-hidden relative bg-gradient-to-b from-[#0c0c1d] to-[#111132]">
             <div className="max-w-6xl  mx-auto">
-                <motion.div initial="initial" animate="animate" variants={textVariants} className="h-[400px] w-full md:w-1/2 flex font-semibold flex-col mt-2 md:mt-0 md:justify-center  gap-5 items-center md:items-start">
+                <motion.div initial="initial" animate="animate" variants={textVariants} className="h-[400px] w-full md:w-1/2 flex font-semibold flex-col mt-2 md:mt-0 md:justify-center gap-2 md:gap-5 items-center md:items-start">
                     <motion.h1 variants={textVariants} className='text-4xl -tracking-tighter text-purple-800'>Prachanda Rana</motion.h1>
                     <motion.h1 variants={textVariants} className='text-xl md:text-7xl  '>Full Stack Developer</motion.h1>
                     <motion.div variants={textVariants} className="flex gap-2 text-xs md:text-lg z-[99] items-center">
@@ -54,8 +54,8 @@ const Hero = () => {
             <motion.div variants={sliderVariants} initial="initial" animate="animate" className="absolute selection:bg-none bottom-10 text-[#ffffff09] w-1/2 font-bold text-[40vh] whitespace-nowrap">
                 Coder , Developer , Programmer
             </motion.div>
-            <div className="h-full absolute -right-40 md:right-0 -bottom-4 md:-bottom-20 ">
-                <img src={bg} alt="background" className='object-contain' />
+            <div className="h-full absolute top-16 md:-top-3 right-12 md:right-10 -bottom-14 md:-bottom-20 ">
+                <img src={bg} alt="background" className='object-cover w-full h-full' />
             </div>
         </div >
     )
