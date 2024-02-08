@@ -1,7 +1,7 @@
 import { useRef } from 'react'
 import mountains from '../assets/mountains.png'
 import stars from '../assets/stars.png'
-import { delay, motion, useScroll, useTransform } from 'framer-motion'
+import { motion, useScroll, useTransform } from 'framer-motion'
 
 const Parallax = ({ heading, gradient, bg }) => {
     const ref = useRef()
@@ -19,8 +19,8 @@ const Parallax = ({ heading, gradient, bg }) => {
             }}
             className="w-full relative overflow-hidden h-full flex items-center justify-center"
         >
-            <motion.h1 style={{ y: yText }} className="text-8xl font-bold">{heading}</motion.h1>
-            <motion.div style={{ background: `url(${mountains}) no-repeat center/cover` }} className="mountains z-[3] absolute h-full w-full  "></motion.div>
+            <motion.h1 style={{ y: yText }} className="text-6xl md:text-8xl font-bold">{heading}</motion.h1>
+            <motion.div style={{ background: `url(${mountains}) no-repeat center/cover` }} className="mountains  z-[3] absolute h-full w-full  "></motion.div>
             <motion.div style={{ background: `url(${bg}) no-repeat center/cover`, y: yBg }} className="mountains z-[2] absolute h-full w-full  "></motion.div>
             <motion.div style={{ background: `url(${stars}) no-repeat center/cover`, x: yBg }} className="mountains z-[1] absolute h-full w-full  "></motion.div>
         </div>

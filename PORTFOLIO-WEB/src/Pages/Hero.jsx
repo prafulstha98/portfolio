@@ -54,8 +54,8 @@ const Hero = () => {
             <motion.div variants={sliderVariants} initial="initial" animate="animate" className="absolute selection:bg-none bottom-10 text-[#ffffff09] w-1/2 font-bold text-[40vh] whitespace-nowrap">
                 Coder , Developer , Programmer
             </motion.div>
-            <div className="h-full absolute top-16 md:-top-3 right-12 md:right-10 -bottom-14 md:-bottom-20 ">
-                <img src={bg} alt="background" className='object-cover w-full h-full' />
+            <div className="md:h-full absolute  bottom-16 right:96 md:-top-3  md:right-10 right-4  md:w-auto  w-[100%]   ">
+                <img src={bg} alt="background" className='object-cover md:w-full md:h-full' />
             </div>
         </div >
     )
