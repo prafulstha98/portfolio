@@ -13,6 +13,7 @@ const Contacts = () => {
             .sendForm('service_3di3m7q', 'template_4xxvkvo', formRef.current, {
                 publicKey: 'L9QGZIc1lnT8XMoSG',
             })
+
             .then(
                 () => {
                     setSuccess(true)

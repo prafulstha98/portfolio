@@ -1,3 +1,4 @@
+import Cursor from "./Components/Cursor";
 import Navbar from "./Components/Navbar";
 import Parallax from "./Components/Parallax";
 import Contacts from "./Pages/Contacts";
@@ -10,6 +11,7 @@ import sun from './assets/sun.png'
 
 const App = () => {
   return <div>
+    <Cursor />
     <section id="homepage">
       <Navbar />
       <Hero />
