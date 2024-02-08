@@ -29,19 +29,19 @@ const Navbar = () => {
         visible: { color: 'white' },
     };
     return (
-        <nav className="h-28">
+        <nav className=" md:h-28">
             <Sidebar />
-            <div className="wrapper h-full max-w-6xl mx-auto justify-between p-2 flex items-center">
+            <div className="wrapper  p-6 h-full md:max-w-6xl mx-auto justify-end md:justify-between md:p-2 flex items-center">
                 <motion.span
                     initial={{ opacity: 0, scale: 0.5 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: .5, duration: .5 }}
-                    className="font-bold text-xl"
+                    className="font-bold hidden md:block text-xl"
                 >Prachanda Rana</motion.span>
                 <motion.div
                     initial="hidden" animate="visible"
                     variants={variants}
-                    className="social-icons flex gap-5 text-xl items-center">
+                    className="social-icons flex gap-3 md:gap-5 text-xl items-center">
 
                     {socialIconsName?.map((icon) => (
                         <motion.a

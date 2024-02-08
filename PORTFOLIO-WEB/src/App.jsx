@@ -17,7 +17,7 @@ const App = () => {
       <Hero />
     </section>
 
-    <section id="services">
+    {/* <section id="services">
       <Parallax
         heading="What I do"
         gradient="#0c0c1d"
@@ -37,14 +37,14 @@ const App = () => {
         bg={sun}
       />
     </section>
-    <Projects />
+    <Projects /> */}
 
     {/* <section id="about">About</section> */}
 
-    <section id="skills">skills</section>
+    {/* <section id="skills">skills</section>
     <section id="contacts">
       <Contacts />
-    </section>
+    </section> */}
   </div>;
 };
 
