@@ -48,30 +48,29 @@ const Services = () => {
     return (
         <motion.div
             variants={variants} initial="initial"
-            animate={isInView && "animate"}
+            animate={"animate"}
             whileInView={"animate"}
             ref={ref}
             style={{ background: 'linear-gradient(180deg,#0c0c1d,#111132)' }} className='h-full flex p-2  flex-col justify-between' >
-            <motion.div className="textcontainer self-end flex items-center gap-5">
-
-                <motion.p className='font-extralight text-xl text-right text-gray-500' >I focus on helping your brand grow <br /> and move forward</motion.p>
-                <hr className='w-[500px] border border-t-gray' />
+            <motion.div className="textcontainer w-full md:w-auto self-center flex-col md:flex-row text-center md:self-end flex items-center gap-5">
+                <motion.p className='font-extralight text-base md:text-xl text-right text-gray-500' >I focus on helping your brand grow <br /> and move forward</motion.p>
+                <hr className='md:w-[500px] w-[300px] border border-t-gray  mb-2 md:mb-0' />
             </motion.div>
 
             <motion.div
                 variants={variants}
                 className="titleCOntainer flex flex-col gap-5 items-center  ">
-                <div className="title flex gap-5 items-center ">
+                <div className="title flex-col md:flex-row gap-1 flex text-center md:gap-5 items-center ">
                     <img src={people} className='rounded-[50px] h-20 w-72 object-cover' alt="title" />
-                    <h1 className='text-7xl font-extralight'>
+                    <h1 className='text-4xl md:text-7xl font-extralight'>
                         <motion.b whileHover={{ color: 'orange' }}>Unique</motion.b> Ideas
                     </h1>
                 </div>
-                <div className="title flex gap-5 items-center">
-                    <h1 className='text-6xl font-extralight'>
+                <div className="title flex  gap-5 items-center">
+                    <h1 className=' text-3xl md:text-6xl font-extralight'>
                         <motion.b whileHover={{ color: 'orange' }}>For Your</motion.b> Business.
                     </h1>
-                    <button className=' py-4 px-6 rounded-xl border-2 shadow-lg hover:bg-blue-900 transition-all delay-300 ease-out  border-blue-900 font-semibold text-xl bg-transparent uppercase'>what I do</button>
+                    <button className=' py-4 px-10 md:px-6 rounded-xl border-2 shadow-lg hover:bg-blue-900 transition-all delay-300 ease-out  border-blue-900 font-semibold text-nowrap text-sm md:text-xl bg-transparent uppercase'>what I do</button>
                 </div>
             </motion.div>
             <motion.div

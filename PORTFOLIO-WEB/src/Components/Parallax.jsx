@@ -19,7 +19,7 @@ const Parallax = ({ heading, gradient, bg }) => {
             }}
             className="w-full relative overflow-hidden h-full flex items-center justify-center"
         >
-            <motion.h1 style={{ y: yText }} className="text-6xl md:text-8xl font-bold">{heading}</motion.h1>
+            <motion.h1 style={{ y: yText }} className="text-5xl md:text-8xl font-bold">{heading}</motion.h1>
             <motion.div style={{ background: `url(${mountains}) no-repeat center/cover` }} className="mountains  z-[3] absolute h-full w-full  "></motion.div>
             <motion.div style={{ background: `url(${bg}) no-repeat center/cover`, y: yBg }} className="mountains z-[2] absolute h-full w-full  "></motion.div>
             <motion.div style={{ background: `url(${stars}) no-repeat center/cover`, x: yBg }} className="mountains z-[1] absolute h-full w-full  "></motion.div>
