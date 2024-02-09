@@ -10,7 +10,7 @@ import sun from './assets/sun.png'
 
 
 const App = () => {
-  return <div>
+  return <div >
     <Cursor />
     <section id="homepage">
       <Navbar />
@@ -26,7 +26,7 @@ const App = () => {
 
     </section>
 
-    <section>
+    <section className="h-auto md:h-[100vh]">
       <Services />
     </section>
 

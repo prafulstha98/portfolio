@@ -14,7 +14,7 @@ const Cursor = () => {
     }, [])
 
     return (
-        <motion.div animate={{ x: cursor.x + 10, y: cursor.y + 10 }} style={{ borderColor: `rgb(${cursor.x + cursor.y},${cursor.x},${cursor.y})` }} className="w-10 h-10 hidden md:block rounded-full border-2 p-6 z-[999]  fixed "></motion.div>
+        <motion.div animate={{ x: cursor.x + 10, y: cursor.y + 10 }} style={{ borderColor: `rgb(${cursor.x + cursor.y},${cursor.x},${cursor.y})` }} className="w-10 h-10 hidden md:block rounded-full border-2 p-6 z-[999] fixed "></motion.div>
     )
 }
 
