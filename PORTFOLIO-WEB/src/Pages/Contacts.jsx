@@ -92,7 +92,7 @@ const Contacts = () => {
                 </motion.div> */}
 
                 </motion.div>
-                <div className="formContainer  w-full p-10 md:p-0  relative stroke-blue-500 flex-1" >
+                <div className="formContainer  w-[90vw] p-10 md:p-0  relative stroke-blue-500 flex-1" >
                     <motion.div className=' -z-10 absolute h-ful w-full'
                         initial={{ opacity: 1 }}
                         whileInView={{ opacity: 0 }}

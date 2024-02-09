@@ -39,8 +39,8 @@ const Services = () => {
     return (
         <motion.div
             variants={variants} initial="initial"
-            animate={"animate"}
-            whileInView={"animate"}
+            animate="animate"
+            whileInView="animate"
             ref={ref}
             style={{ background: 'linear-gradient(180deg,#0c0c1d,#111132)' }} className=' flex p-2  flex-col justify-between ' >
             <div className='sticky bg-gradient-to-b from-[#0c0c1d] to-[#111132] top-0 left-0'>
@@ -70,6 +70,7 @@ const Services = () => {
             </motion.div>
             <motion.div
                 variants={variants}
+                whileInView="animate"
                 className="listcontainer flex-wrap gap-4 p-5 items-center justify-around flex-col md:flex-row  flex">
                 {
                     topics?.map((topic) => (
