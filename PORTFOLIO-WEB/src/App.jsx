@@ -41,10 +41,10 @@ const App = () => {
 
     {/* <section id="about">About</section> */}
 
-    {/* <section id="skills">skills</section>
+    {/* <section id="skills">skills</section> */}
     <section id="contacts">
       <Contacts />
-    </section> */}
+    </section>
   </div>;
 };
 

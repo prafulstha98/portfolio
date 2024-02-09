@@ -6,7 +6,7 @@ import { Link } from "react-router-dom"
 const SingleItem = ({ projectItems }) => {
     const ref = useRef()
     const { scrollYProgress } = useScroll({ target: ref })
-    const x = useTransform(scrollYProgress, [0, 1], [-300, 300])
+    const x = useTransform(scrollYProgress, [0, 1], [300, -300])
 
 
     return (

@@ -73,9 +73,9 @@ const Contacts = () => {
         setSuccess(false)
     }, 2000);
     return (
-        <motion.div ref={ref} variants={variants} initial="initial" whileInView="animate" className="contact  h-full max-w-6xl m-auto flex flex-col md:flex-row items-center  gap-10">
-            <motion.div variants={variants} className="textContainer flex flex-col gap-8 flex-1">
-                <h1 className="text-7xl leading-[90px] font-bold">Lets Work Together</h1>
+        <motion.div ref={ref} variants={variants} initial="initial" whileInView="animate" className="contact p-3 md:p-0 h-full w-full md:max-w-6xl m-auto flex flex-col md:flex-row items-center  gap-10">
+            <motion.div variants={variants} className="textContainer flex flex-col gap-4 text-center items-center md:items-start md:text-left mt-20 md:mt-0 md:gap-8 flex-1">
+                <h1 className="text-3xl md:text-7xl md:leading-[90px] font-bold">Lets Work Together</h1>
                 <motion.div variants={leftVariants} className="item">
                     <motion.h1 variants={leftVariants} className="font-semibold"> Mail:</motion.h1>
                     <span className="font-light">pralhadrana123@gmail.com</span>
@@ -90,7 +90,7 @@ const Contacts = () => {
                 </motion.div> */}
 
             </motion.div>
-            <div className="formContainer  relative stroke-blue-500 flex-1" >
+            <div className="formContainer w-full p-10 md:p-0  relative stroke-blue-500 flex-1" >
                 <motion.div className=' -z-10 absolute h-ful w-full'
                     initial={{ opacity: 1 }}
                     whileInView={{ opacity: 0 }}
@@ -101,6 +101,7 @@ const Contacts = () => {
                 >
 
                     <svg viewBox="0 0 24 24" height="500px" width="500px" fill="none"
+                        className='w-[80%] h-full'
                     >
                         <motion.path
                             initial={{ pathLength: 0 }}
@@ -112,10 +113,10 @@ const Contacts = () => {
                 </motion.div>
 
                 <motion.form ref={formRef} variants={formVariants} onSubmit={sendEmail} className="flex  flex-col gap-2 ">
-                    <input className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="text" required placeholder="Name" name='name' />
-                    <input className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="email" required placeholder="Email" name="email" />
-                    <textarea className="py-3 px-6 bg-transparent text-white border border-white rounded-lg" rows="8" placeholder="Message" name="message"></textarea>
-                    <button type='submit' className="bg-orange-500  transition-all delay-200 ease-in-out py-2 px-6 rounded-lg text-lg hover:bg-white hover:text-black font-semibold">Submit</button>
+                    <input className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="text" required placeholder="Name" name='name' />
+                    <input className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="email" required placeholder="Email" name="email" />
+                    <textarea className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" rows="8" placeholder="Message" name="message"></textarea>
+                    <button type='submit' className="bg-orange-500  transition-all delay-200 ease-in-out py-1 md:py-2 px-6 rounded-lg text-lg hover:bg-white hover:text-black font-semibold">Submit</button>
 
                     <p className={`text-center font-lg h-4 ${error ? 'text-red-800' : 'text-green-700'}`}>
                         {error && 'Error while sending the mail...!!!'}
