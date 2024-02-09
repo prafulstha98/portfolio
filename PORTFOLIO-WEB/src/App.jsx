@@ -6,6 +6,7 @@ import Contacts from "./Pages/Contacts";
 import Hero from "./Pages/Hero";
 import Projects from "./Pages/Projects";
 import Services from "./Pages/Services";
+import Skills from "./Pages/Skills";
 import planets from './assets/planets.png'
 import sun from './assets/sun.png'
 
@@ -16,6 +17,9 @@ const App = () => {
     <section id="homepage">
       <Navbar />
       <Hero />
+    </section>
+    <section id="skills">
+      <Skills />
     </section>
 
     <section id="services">
@@ -42,7 +46,6 @@ const App = () => {
 
     {/* <section id="about">About</section> */}
 
-    {/* <section id="skills">skills</section> */}
     <section id="contacts">
       <Contacts />
     </section>

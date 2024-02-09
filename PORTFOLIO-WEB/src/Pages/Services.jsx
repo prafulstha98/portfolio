@@ -4,6 +4,7 @@ import ServiceBox from '../Components/ServiceBox'
 import { topics } from '../constants'
 import { useRef } from 'react'
 import { Link } from 'react-router-dom'
+import TagComponent from '../Components/TagComponent'
 const Services = () => {
     const ref = useRef()
     const variants = {
@@ -43,9 +44,8 @@ const Services = () => {
             whileInView="animate"
             ref={ref}
             style={{ background: 'linear-gradient(180deg,#0c0c1d,#111132)' }} className=' flex p-2  flex-col justify-between ' >
-            <div className='sticky bg-gradient-to-b from-[#0c0c1d] to-[#111132] top-0 left-0'>
-                <h2 style={{ textShadow: '2px 2px 10px blue' }} className="text-center text-4xl md:text-5xl uppercase font-semibold p-2">&lt;services /&gt;</h2>
-            </div>
+
+            <TagComponent title="Services" />
 
             <motion.div className="textcontainer w-full md:w-auto self-center flex-col md:flex-row text-center md:self-end flex items-center gap-5">
                 <motion.p className='font-extralight text-base md:text-xl text-right text-gray-500' >I focus on helping your brand grow <br /> and move forward</motion.p>
