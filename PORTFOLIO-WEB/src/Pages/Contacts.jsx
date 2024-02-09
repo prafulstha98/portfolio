@@ -71,9 +71,9 @@ const Contacts = () => {
         setSuccess(false)
     }, 2000);
     return (
-        <div className='border-2 flex flex-col gap-5 p-10'>
-            <div>
-                <h1 className='text-3xl md:text-6xl p-2 text-center text-semibold'>&lt;Contact Me /&gt;</h1>
+        <div className=' flex flex-col md:h-[130vh] gap-2 p-10'>
+            <div className='sticky bg-gradient-to-b from-[#0c0c1d] to-[#111132] top-0 left-0'>
+                <h1 style={{ textShadow: '2px 2px 10px blue' }} className=' text-3xl md:text-5xl uppercase p-2 text-center text-semibold'>&lt;Contact Me /&gt;</h1>
             </div>
             <motion.div variants={variants} initial="initial" whileInView="animate" className="contact p-3 md:p-0  w-full md:max-w-6xl   m-auto flex flex-col md:flex-row items-center  gap-10">
                 <motion.div variants={variants} className="textContainer flex flex-col gap-4 text-center items-center md:items-start md:text-left mt-20 md:mt-0 md:gap-8 flex-1">
