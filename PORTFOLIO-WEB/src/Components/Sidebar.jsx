@@ -58,7 +58,7 @@ const Sidebar = () => {
         >
             <motion.div
                 variants={variants}
-                className="fixed top-0  left-0 w-60 md:w-80  h-screen md:h-auto  bg-white">
+                className="fixed top-0 left-0 w-60 md:w-80  h-screen md:h-auto  bg-white">
                 <motion.div
                     variants={linkVariants}
                     className="  w-52 md:w-80 min-h-[590px] z-50 absolute flex flex-col bg-white mt-20 md:mt-0 md:justify-center  items-center md:items-start gap-4">

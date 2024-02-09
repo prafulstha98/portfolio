@@ -1,4 +1,5 @@
 import Cursor from "./Components/Cursor";
+import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Parallax from "./Components/Parallax";
 import Contacts from "./Pages/Contacts";
@@ -26,7 +27,7 @@ const App = () => {
 
     </section>
 
-    <section className="h-auto md:h-[100vh]">
+    <section >
       <Services />
     </section>
 
@@ -45,6 +46,7 @@ const App = () => {
     <section id="contacts">
       <Contacts />
     </section>
+    <Footer />
   </div>;
 };
 

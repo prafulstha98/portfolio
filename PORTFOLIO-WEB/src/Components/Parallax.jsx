@@ -17,7 +17,7 @@ const Parallax = ({ heading, gradient, bg }) => {
             style={{
                 background: `linear-gradient(180deg,#111132,${gradient})`
             }}
-            className="w-full relative overflow-hidden h-full flex items-center justify-center"
+            className="w-full relative overflow-hidden h-[100vh]  flex items-center justify-center"
         >
             <motion.h1 style={{ y: yText }} className="text-5xl md:text-8xl font-bold">{heading}</motion.h1>
             <motion.div style={{ background: `url(${mountains}) no-repeat center/cover` }} className="mountains  z-[3] absolute h-full w-full  "></motion.div>
