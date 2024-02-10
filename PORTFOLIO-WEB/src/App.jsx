@@ -2,6 +2,7 @@ import Cursor from "./Components/Cursor";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Parallax from "./Components/Parallax";
+import TagComponent from "./Components/TagComponent";
 import About from "./Pages/About";
 import Contacts from "./Pages/Contacts";
 import Hero from "./Pages/Hero";
@@ -16,6 +17,7 @@ const App = () => {
   return <div >
     <Cursor />
     <section id="homepage">
+      <TagComponent title="Home" />
       <Navbar />
       <Hero />
     </section>

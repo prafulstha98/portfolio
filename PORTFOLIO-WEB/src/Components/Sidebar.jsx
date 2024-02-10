@@ -7,7 +7,7 @@ const Sidebar = () => {
 
     const variants = {
         open: {
-            clipPath: "circle(1200px at 30px 32px)",
+            clipPath: "circle(1200px at 30px 31px)",
             transition: {
                 delay: 0.5,
                 type: 'spring',
@@ -16,7 +16,7 @@ const Sidebar = () => {
             }
         },
         closed: {
-            clipPath: "circle(25px at 30px 32px)",
+            clipPath: "circle(23px at 30px 31px)",
             transition: {
                 delay: 0.5,
                 type: 'spring',
@@ -58,7 +58,7 @@ const Sidebar = () => {
         >
             <motion.div
                 variants={variants}
-                className="fixed top-0 left-0 w-60 md:w-80  h-screen md:h-auto  bg-white">
+                className="fixed -top-1 left-0 w-60 md:w-80  h-screen md:h-auto  bg-white">
                 <motion.div
                     variants={linkVariants}
                     className="  w-52 md:w-80 min-h-[590px] z-50 absolute flex flex-col bg-white mt-20 md:mt-0 md:justify-center  items-center md:items-start gap-4">
@@ -75,7 +75,7 @@ const Sidebar = () => {
             </motion.div>
             <button
                 onClick={() => setOpen(prev => !prev)}
-                className="w-12 h-12 fixed border-none rounded-lg bg-transparent left-5 top-2">
+                className="w-12 h-12 fixed border-none rounded-lg bg-transparent left-5 top-1">
                 {
                     open ? <RxCross2 className="h-6 w-6" /> : <RxHamburgerMenu className="h-6 w-6" />
                 }
