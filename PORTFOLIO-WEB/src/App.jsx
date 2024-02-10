@@ -27,7 +27,8 @@ const App = () => {
     </section>
 
     <section id="skills">
-      {/* <Skills /> */}
+      <TagComponent title='skills' />
+      <Skills />
     </section>
 
     <section id="services">
