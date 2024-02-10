@@ -62,13 +62,13 @@ const Skills = () => {
                 {
                     professionallSkills?.map((skill) => (
                         <div key={skill.name} className='flex items-center p-2 border-2 border-blue-500 w-full  justify-between'>
-                            <div className='flex items-center gap-2 w-20 border-2 md:w-40 '>
+                            <div className='flex items-center gap-2 w-20  md:w-40 '>
                                 <p className='font-semibold text-xs md:text-xl'>{skill.name}</p>
                                 {/* <FaHtml5 className='h-7 w-7' /> */}
                                 {skill.icon}
                             </div>
                             <div className='flex items-center  gap-2'>
-                                <input className='w-5' type="range" min={0} value={skill.skillValue} max={100} />
+                                <input className='w-10 md:w-full' type="range" min={0} value={skill.skillValue} max={100} />
                                 <span>{skill.skillPercentage}</span>
                             </div>
                             <div className='w-20 md:w-32 font-bold text-sm md:text-lg' >Exp: <span className='font-normal'>{skill.exp}</span></div>
