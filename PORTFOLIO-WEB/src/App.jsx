@@ -2,6 +2,7 @@ import Cursor from "./Components/Cursor";
 import Footer from "./Components/Footer";
 import Navbar from "./Components/Navbar";
 import Parallax from "./Components/Parallax";
+import About from "./Pages/About";
 import Contacts from "./Pages/Contacts";
 import Hero from "./Pages/Hero";
 import Projects from "./Pages/Projects";
@@ -18,8 +19,13 @@ const App = () => {
       <Navbar />
       <Hero />
     </section>
+
+    <section id="about">
+      <About />
+    </section>
+
     <section id="skills">
-      <Skills />
+      {/* <Skills /> */}
     </section>
 
     <section id="services">
@@ -43,8 +49,6 @@ const App = () => {
       />
     </section>
     <Projects />
-
-    {/* <section id="about">About</section> */}
 
     <section id="contacts">
       <Contacts />
