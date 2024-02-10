@@ -40,7 +40,7 @@ const Hero = () => {
     }
     return (
         <div className="min-h-screen  p-2 overflow-hidden relative bg-gradient-to-b from-[#0c0c1d] to-[#111132]">
-            <div className="max-w-6xl items-center justify-between px-4 gap-4 flex flex-col md:flex-row mx-auto">
+            <div className="max-w-6xl items-center justify-center md:justify-between px-4 gap-4 flex flex-col md:flex-row mx-auto">
                 <motion.div initial="initial" animate="animate" variants={textVariants} className="w-full md:w-1/2 flex font-semibold flex-col mt-2 md:mt-0 md:justify-center gap-2 md:gap-5 items-center md:items-start">
                     <motion.h1 variants={textVariants} className='text-4xl -tracking-tighter text-purple-800'>Prachanda Rana</motion.h1>
                     <motion.h1 variants={textVariants} className='text-xl md:text-7xl  '>Full Stack Developer</motion.h1>
@@ -58,7 +58,6 @@ const Hero = () => {
                     </motion.div>
                     <motion.img animate="scrollButton" variants={textVariants} src={scroll} alt="scroll" width={50} />
                 </motion.div>
-
                 <div
                     style={{ boxShadow: 'inset 4px 4px 20px purple' }}
                     className='border-8 border-purple-900  overflow-hidden h-[250px] w-[250px]  md:h-[350px] md:w-[350px] rounded-full'>
