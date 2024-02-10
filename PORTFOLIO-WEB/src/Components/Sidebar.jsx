@@ -16,7 +16,7 @@ const Sidebar = () => {
             }
         },
         closed: {
-            clipPath: "circle(23px at 30px 31px)",
+            clipPath: "circle(21px at 30px 30px)",
             transition: {
                 delay: 0.5,
                 type: 'spring',
@@ -75,7 +75,7 @@ const Sidebar = () => {
             </motion.div>
             <button
                 onClick={() => setOpen(prev => !prev)}
-                className="w-12 h-12 fixed border-none rounded-lg bg-transparent left-5 top-1">
+                className="w-12 h-12 fixed border-none rounded-lg bg-transparent left-5 top-0">
                 {
                     open ? <RxCross2 className="h-6 w-6" /> : <RxHamburgerMenu className="h-6 w-6" />
                 }
