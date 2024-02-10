@@ -39,7 +39,7 @@ const Hero = () => {
         }
     }
     return (
-        <div className="h-full  p-2 overflow-hidden relative bg-gradient-to-b from-[#0c0c1d] to-[#111132]">
+        <div className="min-h-screen  p-2 overflow-hidden relative bg-gradient-to-b from-[#0c0c1d] to-[#111132]">
             <div className="max-w-6xl items-center justify-between px-4 gap-4 flex flex-col md:flex-row mx-auto">
                 <motion.div initial="initial" animate="animate" variants={textVariants} className="w-full md:w-1/2 flex font-semibold flex-col mt-2 md:mt-0 md:justify-center gap-2 md:gap-5 items-center md:items-start">
                     <motion.h1 variants={textVariants} className='text-4xl -tracking-tighter text-purple-800'>Prachanda Rana</motion.h1>
