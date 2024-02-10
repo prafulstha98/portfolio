@@ -63,8 +63,8 @@ const Contacts = () => {
     return (
         <div className=' flex flex-col min-h-screen gap-2 '>
             <TagComponent title='Contact' />
-            <motion.div variants={variants} initial="initial" whileInView="animate" className="contact p-3 md:p-0  w-full md:max-w-6xl   m-auto flex flex-col md:flex-row items-center  gap-10">
-                <motion.div variants={variants} className="textContainer flex flex-col gap-4 text-center items-center md:items-start md:text-left mt-20 md:mt-0 md:gap-8 flex-1">
+            <motion.div variants={variants} initial="initial" whileInView="animate" className="contact p-16  w-full md:max-w-6xl   m-auto flex flex-col md:flex-row items-center  gap-10">
+                <motion.div variants={variants} className="textContainer flex flex-col gap-4 text-center items-center  md:items-start md:text-left mt-20 md:mt-0 md:gap-8 flex-1">
                     <h1 className="text-3xl md:text-7xl md:leading-[90px] font-bold">Lets Work Together</h1>
                     <motion.div variants={leftVariants} className="item">
                         <motion.h1 variants={leftVariants} className="font-semibold"> Mail:</motion.h1>

@@ -43,11 +43,11 @@ const Services = () => {
             animate="animate"
             whileInView="animate"
             ref={ref}
-            style={{ background: 'linear-gradient(180deg,#0c0c1d,#111132)' }} className=' flex p-2  flex-col justify-between ' >
+            style={{ background: 'linear-gradient(180deg,#0c0c1d,#111132)' }} className=' flex   flex-col justify-between ' >
 
             <TagComponent title="Services" />
 
-            <motion.div className="textcontainer w-full md:w-auto self-center flex-col md:flex-row text-center md:self-end flex items-center gap-5">
+            <motion.div className="textcontainer w-full md:w-auto self-center flex-col md:flex-row text-center md:self-end flex items-center pt-10 gap-5">
                 <motion.p className='font-extralight text-base md:text-xl text-right text-gray-500' >I focus on helping your brand grow <br /> and move forward</motion.p>
                 <hr className='md:w-[500px] w-[300px] border border-t-gray  mb-2 md:mb-0' />
             </motion.div>
