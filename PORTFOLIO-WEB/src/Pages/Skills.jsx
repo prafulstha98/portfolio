@@ -77,7 +77,7 @@ const Skills = () => {
                 </div>
                 <div className='flex w-full flex-col'>
                     <h1>Click to show</h1>
-                    <AnimatePresence exitBeforeEnter={false}>
+                    <AnimatePresence mode='wait'>
                         <Routes>
                             <Route
                                 path={`/${skillsRoute}`}
