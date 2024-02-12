@@ -23,7 +23,7 @@ const Svg = () => {
                 variants={variants}
                 initial="initial"
                 animate="animate"
-                version="1.1" fill="black" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                version="1.1" fill="black"
                 viewBox="0 0 396.494 396.494"
                 stroke="purple">
 

@@ -9,7 +9,12 @@ import { TbBrandJavascript } from "react-icons/tb";
 import { useState } from 'react';
 import SkillsShowComponents from '../Components/SkillsShowComponents';
 import { AnimatePresence, motion } from 'framer-motion';
-
+import html from '../assets/SkillImage/html.png'
+import css from '../assets/SkillImage/css.png'
+import js from '../assets/SkillImage/js.png'
+import react from '../assets/SkillImage/react.png'
+import node from '../assets/SkillImage/nodejs.png'
+import mongodb from '../assets/SkillImage/mongodb.png'
 const Skills = () => {
     const [skillsRoute, setSkillsRoute] = useState('');
 
@@ -17,6 +22,7 @@ const Skills = () => {
         {
             name: 'Html',
             icon: <FaHtml5 />,
+            image: html,
             skillValue: 90,
             skillPercentage: '90%',
             exp: '+2yrs'
@@ -24,6 +30,7 @@ const Skills = () => {
         {
             name: 'Css',
             icon: <FaCss3 />,
+            image: css,
             skillValue: 90,
             skillPercentage: '90%',
             exp: '+2yrs'
@@ -31,6 +38,7 @@ const Skills = () => {
         {
             name: 'JavaScript',
             icon: <TbBrandJavascript />,
+            image: js,
             skillValue: 80,
             skillPercentage: '80%',
             exp: '+3yrs'
@@ -38,6 +46,7 @@ const Skills = () => {
         {
             name: 'React',
             icon: <FaReact />,
+            image: react,
             skillValue: 60,
             skillPercentage: '60%',
             exp: '+1yrs'
@@ -45,6 +54,7 @@ const Skills = () => {
         {
             name: 'Node',
             icon: <FaNodeJs />,
+            image: node,
             skillValue: 70,
             skillPercentage: '70%',
             exp: '+1.5yrs'
@@ -52,6 +62,7 @@ const Skills = () => {
         {
             name: 'MongoDb',
             icon: <DiMongodb />,
+            image: mongodb,
             skillValue: 60,
             skillPercentage: '60%',
             exp: '+9mnth'
@@ -76,7 +87,6 @@ const Skills = () => {
                     ))}
                 </div>
                 <div className='flex w-full flex-col'>
-                    <h1>Click to show</h1>
                     <AnimatePresence mode='wait'>
                         <Routes>
                             <Route

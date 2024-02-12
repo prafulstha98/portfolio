@@ -28,12 +28,12 @@ const About = () => {
                 Hi there, I&apos;m
                 <motion.span
                     variants={variants} initial="initial" animate="animate" className="text-red-500">
-                    {animate(" Prachanda Rana", variants)}
+                    {animate(" Prachanda Rana ", variants)}
                 </motion.span>
                 , and I am a
                 <motion.span variants={upVariants} initial="initial"
                     whileInView="animate" className="text-red-500">
-                    {animate("full stack developer", upVariants)}
+                    {animate(" full stack developer ", upVariants)}
                 </motion.span>
                 with over 2+ years of experience in this field.
                 <br />
