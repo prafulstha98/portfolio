@@ -8,6 +8,7 @@ import { DiMongodb } from "react-icons/di";
 import { TbBrandJavascript } from "react-icons/tb";
 import { useState } from 'react';
 import SkillsShowComponents from '../Components/SkillsShowComponents';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const Skills = () => {
     const [skillsRoute, setSkillsRoute] = useState('');
@@ -61,12 +62,13 @@ const Skills = () => {
         <div className="flex flex-col md:flex-row justify-between p-2">
             <div className='flex order-2 md:order-1 gap-2 flex-col md:w-full p-4 items-center'>
                 <h1 className='text-3xl font-semibold underline underline-offset-4'>Professional Skills</h1>
-                <div className='border-2 w-full flex items-center text-5xl gap-5 flex-wrap'>
+                <div className='md:border-2 border-purple-600 p-3 w-full flex items-center  text-2xl md:text-5xl gap-5 flex-wrap'>
                     {professionallSkills?.map((skill) => (
-                        <div key={skill.name} className='flex items-center gap-2 '>
+                        <div key={skill.name} className='flex items-center  gap-2 '>
                             <div className='flex gap-1 flex-col items-center'>
-                                <span className='text-lg uppercase underline underline-offset-8 text-center'>{skill.name}</span>
-                                <NavLink to={`/${skill.name.toLowerCase()}`} className={({ isActive }) => `${isActive ? 'text-blue-900' : ''}`} onClick={() => setSkillsRoute(skill.name)}>
+
+                                <NavLink to={`/${skill.name.toLowerCase()}`} className={({ isActive }) => `${isActive ? 'text-purple-900' : ''}  flex flex-col items-center`} onClick={() => setSkillsRoute(skill.name)}>
+                                    <span className='text-sm md:text-lg uppercase  text-center'>{skill.name}</span>
                                     {skill.icon}
                                 </NavLink>
                             </div>
@@ -75,12 +77,32 @@ const Skills = () => {
                 </div>
                 <div className='flex w-full flex-col'>
                     <h1>Click to show</h1>
-                    <Routes>
-                        <Route path={`/${skillsRoute}`} element={<SkillsShowComponents data={professionallSkills.find(skill => skill?.name.toLowerCase() === skillsRoute.toLowerCase())} />} />
-                    </Routes>
+                    <AnimatePresence exitBeforeEnter={false}>
+                        <Routes>
+                            <Route
+                                path={`/${skillsRoute}`}
+                                element={
+                                    <motion.div
+                                        initial={{ opacity: 0 }}
+                                        animate={{ opacity: 1 }}
+                                        exit={{ opacity: 0 }}
+                                        transition={{ duration: 0.5 }}
+                                    >
+                                        <SkillsShowComponents
+                                            key={skillsRoute}
+                                            data={professionallSkills.find(
+                                                (skill) =>
+                                                    skill?.name.toLowerCase() === skillsRoute.toLowerCase()
+                                            )}
+                                        />
+                                    </motion.div>
+                                }
+                            />
+                        </Routes>
+                    </AnimatePresence>
                 </div>
             </div>
-            <div className='md:w-[70%] px-20 h-full w-full order-1 md:order-2 md:h-[60%]'>
+            <div className='md:w-[70%] px-20 h-full w-full order-1 overflow-hidden md:order-2 md:h-[60%]'>
                 <Svg />
             </div>
         </div>
