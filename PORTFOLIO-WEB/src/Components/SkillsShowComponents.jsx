@@ -1,7 +1,7 @@
 import { motion } from "framer-motion"
 
 
-const SkillsShowComponents = ({ data }) => {
+const SkillsShowComponents = ({ data = {} }) => {
     const variants = {
         initial: {
             y: -50,
