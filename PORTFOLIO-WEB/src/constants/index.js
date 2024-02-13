@@ -1,7 +1,8 @@
 import NikeStore from '../assets/projects/nike-store.png'
 import MernEstate from '../assets/projects/mern-estate.png'
 import MovieFlexHub from '../assets/projects/movie-flex-hub.png'
-// import { NikeStore, MernEstate, MovieFlexHub } from '../assets/projects/'
+
+
 export const sideBarlinkItems = [
     "Homepage",
     "About",
@@ -60,3 +61,6 @@ export const projectItems = [
     },
 
 ]
+
+
+

@@ -1,20 +1,19 @@
 import Svg from '../Components/Svg'
 import { NavLink, Route, Routes } from 'react-router-dom'
-import { FaHtml5 } from "react-icons/fa";
-import { FaCss3 } from "react-icons/fa";
-import { FaReact } from "react-icons/fa";
-import { FaNodeJs } from "react-icons/fa";
+import { FaHtml5, FaNodeJs, FaCss3, FaReact } from "react-icons/fa";
 import { DiMongodb } from "react-icons/di";
 import { TbBrandJavascript } from "react-icons/tb";
-import { useState } from 'react';
-import SkillsShowComponents from '../Components/SkillsShowComponents';
-import { AnimatePresence, motion } from 'framer-motion';
+
 import html from '../assets/SkillImage/html.png'
 import css from '../assets/SkillImage/css.png'
 import js from '../assets/SkillImage/js.png'
 import react from '../assets/SkillImage/react.png'
 import node from '../assets/SkillImage/nodejs.png'
 import mongodb from '../assets/SkillImage/mongodb.png'
+import { useState } from 'react';
+import SkillsShowComponents from '../Components/SkillsShowComponents';
+import { AnimatePresence, motion } from 'framer-motion';
+
 const Skills = () => {
     const [skillsRoute, setSkillsRoute] = useState('');
 
@@ -68,17 +67,16 @@ const Skills = () => {
             exp: '+9mnth'
         },
     ];
-
     return (
         <div className="flex flex-col md:flex-row justify-between p-2">
             <div className='flex order-2 md:order-1 gap-2 flex-col md:w-full p-4 items-center'>
                 <h1 className='text-3xl font-semibold underline underline-offset-4'>Professional Skills</h1>
-                <div className='md:border-2 border-t-transparent border-l-transparent border-r-transparent border-b-purple-600 p-3 w-full flex items-center  text-2xl md:text-5xl gap-5 flex-wrap'>
+                <div className='md:border-2 border-t-transparent border-l-transparent border-r-transparent border-b-purple-600 p-3 w-full flex items-center  text-2xl md:text-5xl gap-7 flex-wrap'>
                     {professionallSkills?.map((skill) => (
                         <div key={skill.name} className='flex items-center  gap-2 '>
                             <div className='flex gap-1 flex-col items-center'>
 
-                                <NavLink to={`/${skill.name.toLowerCase()}`} className={({ isActive }) => `${isActive ? 'text-purple-900' : ''}  flex flex-col items-center`} onClick={() => setSkillsRoute(skill.name)}>
+                                <NavLink to={`/${skill.name.toLowerCase()}`} className={({ isActive }) => `${isActive ? 'text-purple-900 ' : ''}  flex flex-col items-center`} onClick={() => setSkillsRoute(skill.name)}>
                                     <span className='text-sm md:text-lg uppercase  text-center'>{skill.name}</span>
                                     {skill.icon}
                                 </NavLink>

@@ -81,11 +81,11 @@ const Contacts = () => {
 
                 </motion.div>
                 <div className="formContainer  w-[90vw] p-10 md:p-0  relative stroke-blue-500 flex-1" >
-                    <motion.form ref={formRef} variants={leftVariants} onSubmit={sendEmail} className="flex  flex-col gap-2 ">
-                        <motion.input variants={leftVariants} className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="text" required placeholder="Name" name='name' />
-                        <motion.input variants={leftVariants} className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="email" required placeholder="Email" name="email" />
-                        <motion.textarea variants={leftVariants} className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" rows="8" placeholder="Message" name="message"></motion.textarea>
-                        <motion.button variants={leftVariants} type='submit' className="bg-orange-500  transition-all delay-200 ease-in-out py-1 md:py-2 px-6 rounded-lg text-lg hover:bg-white hover:text-black font-semibold">Submit</motion.button>
+                    <motion.form ref={formRef} variants={variants} onSubmit={sendEmail} className="flex  flex-col gap-2 ">
+                        <input className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="text" required placeholder="Name" name='name' />
+                        <input className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" type="email" required placeholder="Email" name="email" />
+                        <textarea className=" py-1.5  md:py-3 px-6 bg-transparent text-white border border-white rounded-lg" rows="8" placeholder="Message" name="message"></textarea>
+                        <button type='submit' className="bg-orange-500  transition-all delay-200 ease-in-out py-1 md:py-2 px-6 rounded-lg text-lg hover:bg-white hover:text-black font-semibold">Submit</button>
 
                         <p className={`text-center font-lg h-4 ${error ? 'text-red-800' : 'text-green-700'}`}>
                             {error && 'Error while sending the mail...!!!'}

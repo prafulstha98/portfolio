@@ -28,13 +28,7 @@ const Services = () => {
         },
         animate: {
             x: 0,
-            opacity: 1,
-            transition: {
-                duration: .5,
-                stiffness: 110,
-                damping: 20,
-                staggerChildren: .1
-            }
+            opacity: 1
         }
     }
     return (
@@ -68,17 +62,16 @@ const Services = () => {
                     <Link to='/#projects' className='py-2 md:py-4 px-6 md:px-6 rounded-xl border-2 shadow-lg hover:bg-blue-900 transition-all delay-300 ease-out  border-blue-900 font-semibold text-nowrap text-sm md:text-xl bg-transparent uppercase'>what I did</Link>
                 </div>
             </motion.div>
-            <motion.div
-                variants={variants}
-                whileInView="animate"
+            <div
+
                 className="listcontainer flex-wrap gap-4 p-5 items-center justify-around flex-col md:flex-row  flex">
                 {
                     topics?.map((topic) => (
-                        <ServiceBox key={topic.title} variants={boxVariants} title={topic.title} body={topic.body} />
+                        <ServiceBox key={topic.title} title={topic.title} body={topic.body} />
                     ))
                 }
 
-            </motion.div>
+            </div>
         </motion.div>
     )
 }
