@@ -21,16 +21,7 @@ const Services = () => {
             }
         }
     }
-    const boxVariants = {
-        initial: {
-            x: -500,
-            opacity: 0
-        },
-        animate: {
-            x: 0,
-            opacity: 1
-        }
-    }
+
     return (
         <motion.div
             variants={variants} initial="initial"

@@ -68,10 +68,10 @@ const Skills = () => {
         },
     ];
     return (
-        <div className="flex flex-col md:flex-row justify-between p-2">
+        <div className="flex flex-col md:flex-row  justify-between p-2">
             <div className='flex order-2 md:order-1 gap-2 flex-col md:w-full p-4 items-center'>
                 <h1 className='text-3xl font-semibold underline underline-offset-4'>Professional Skills</h1>
-                <div className='md:border-2 border-t-transparent border-l-transparent border-r-transparent border-b-purple-600 p-3 w-full flex items-center  text-2xl md:text-5xl gap-7 flex-wrap'>
+                <div className='md:border-2 border-t-transparent border-l-transparent border-r-transparent border-b-purple-600 p-3 w-full flex items-center  text-2xl md:text-4xl gap-7 flex-wrap'>
                     {professionallSkills?.map((skill) => (
                         <div key={skill.name} className='flex items-center  gap-2 '>
                             <div className='flex gap-1 flex-col items-center'>
@@ -110,7 +110,7 @@ const Skills = () => {
                     </AnimatePresence>
                 </div>
             </div>
-            <div className='md:w-[70%] px-20 h-full w-full order-1 overflow-hidden md:order-2 md:h-[60%]'>
+            <div className='md:w-[70%] px-20  h-full w-full order-1 overflow-hidden md:order-2 md:h-[70%]'>
                 <Svg />
             </div>
         </div>

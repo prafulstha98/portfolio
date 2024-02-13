@@ -30,7 +30,6 @@ const SkillsShowComponents = ({ data = '' }) => {
                 duration: .3,
                 damping: 50,
                 stiffness: 150,
-                staggerChildren: .5
             }
         }
     }
@@ -44,10 +43,10 @@ const SkillsShowComponents = ({ data = '' }) => {
             opacity: 1,
             // boxShadow: '1px 1px 2px gray',
             transition: {
-                duration: .5,
+                duration: .4,
                 damping: 30,
                 stiffness: 120,
-                staggerChildren: .2
+                staggerChildren: .1
             }
         },
     }
@@ -109,7 +108,7 @@ const SkillsShowComponents = ({ data = '' }) => {
                     </motion.div>
                 </div>
 
-                <div className="border-2 order-1 md:order-2 border-purple-700 md:w-[70%] md:h-1/2 rounded-xl overflow-hidden flex">
+                <div className="border-2 order-1 md:order-2 border-purple-700 md:w-[60%] md:h-1/2 rounded-xl overflow-hidden flex">
                     <motion.img variants={imageVariants} initial="initial" animate="animate" className="w-full  object-contain" src={data.image} alt="skill" />
                 </div>
             </div>
