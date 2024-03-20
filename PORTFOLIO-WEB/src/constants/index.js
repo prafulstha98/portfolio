@@ -1,7 +1,7 @@
 import NikeStore from '../assets/projects/nike-store.png'
 import MernEstate from '../assets/projects/mern-estate.png'
 import MovieFlexHub from '../assets/projects/movie-flex-hub.png'
-
+import brainWave from '../assets/projects/brain-wave.png'
 
 export const sideBarlinkItems = [
     "Homepage",
@@ -12,8 +12,7 @@ export const sideBarlinkItems = [
     "Contacts"
 ]
 
-export const topics = [
-    {
+export const topics = [{
         title: 'UI/UX Design',
         body: 'In UI/UX design, I focus on creating visually appealing and user-centric interfaces. Leveraging my skills in animation, I strive to deliver professional and seamless experiences. Attention to detail ensures a polished design, enhancing user engagement and satisfaction.'
     },
@@ -32,8 +31,7 @@ export const topics = [
 ];
 
 
-export const projectItems = [
-    {
+export const projectItems = [{
         id: 1,
         title: 'Online Rental Market Place',
         live: 'https://mern-estate-bca.onrender.com/',
@@ -59,8 +57,13 @@ export const projectItems = [
         img: NikeStore,
         description: "Nike Store is a static application designed for users to explore the latest shoe collections. Built using Tailwind CSS, this project focuses on showcasing Nike's products in an aesthetically pleasing and user-friendly manner. Through this application, users can browse through various shoe designs and learn about their features. Additionally, the project served as a learning experience for implementing Tailwind CSS, emphasizing responsiveness and efficient code organization"
     },
+    {
+        id: 4,
+        title: 'Brain Wave',
+        live: 'https://brain-wave-ai-web.vercel.app/',
+        github: 'https://github.com/prachanda482244/brain-wave',
+        img: brainWave,
+        description: "Brainwave is an innovative static website that serves as a dynamic showcase of the immense potential of Artificial Intelligence (AI), while also spotlighting the latest advancements in technology and design. With a seamless fusion of cutting-edge AI applications and captivating design elements, Brainwave offers visitors a glimpse into the transformative capabilities of AI across various domains."
+    },
 
 ]
-
-
-
