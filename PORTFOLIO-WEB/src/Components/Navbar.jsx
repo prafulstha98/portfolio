@@ -37,7 +37,7 @@ const Navbar = () => {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: .5, duration: .5 }}
                     className="font-bold hidden md:block text-xl"
-                >Prachanda Rana</motion.span>
+                >Praful Shrestha</motion.span>
                 <motion.div
                     initial="hidden" animate="visible"
                     variants={variants}
