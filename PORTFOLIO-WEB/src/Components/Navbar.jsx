@@ -4,10 +4,10 @@ import { FaFacebookF, FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 const Navbar = () => {
     const socialIconsName = [
-        { url: 'https://www.facebook.com/itachiUchiha482244', name: <FaFacebookF /> },
-        { url: 'https://github.com/prachanda482244', name: <FaGithub /> },
-        { url: 'https://www.linkedin.com/in/prachanda-rana/', name: <FaLinkedin /> },
-        { url: 'https://twitter.com/Itachi482244', name: <FaTwitter /> },
+        { url: 'https://www.facebook.com/praful.shrestha.184', name: <FaFacebookF /> },
+        { url: 'https://github.com/prafulstha98', name: <FaGithub /> },
+        { url: 'https://www.linkedin.com/in/praful-stha-7a2910281/', name: <FaLinkedin /> },
+        { url: 'https://twitter.com/prafulstha98', name: <FaTwitter /> },
     ]
 
     const variants = {

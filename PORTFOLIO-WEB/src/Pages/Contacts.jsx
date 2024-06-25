@@ -10,8 +10,8 @@ const Contacts = () => {
         e.preventDefault();
 
         emailjs
-            .sendForm('service_3di3m7q', 'template_4xxvkvo', formRef.current, {
-                publicKey: 'L9QGZIc1lnT8XMoSG',
+            .sendForm('service_t9jsg8g', 'template_mmiboq1', formRef.current, {
+                publicKey: 'ZVBrgt3HshvDQpVjO',
             })
 
             .then(
@@ -68,7 +68,7 @@ const Contacts = () => {
                     <h1 className="text-3xl md:text-7xl md:leading-[90px] font-bold">Lets Work Together</h1>
                     <motion.div variants={leftVariants} className="item">
                         <motion.h1 variants={leftVariants} className="font-semibold"> Mail:</motion.h1>
-                        <span className="font-light">pralhadrana123@gmail.com</span>
+                        <span className="font-light">prafulshrestha57@gmail.com</span>
                     </motion.div>
                     <motion.div variants={leftVariants} className="item">
                         <motion.h1 variants={leftVariants} className="font-semibold">Address:</motion.h1>

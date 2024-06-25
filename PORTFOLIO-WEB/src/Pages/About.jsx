@@ -28,7 +28,7 @@ const About = () => {
                 Hi there, myself
                 <motion.span
                     variants={variants} initial="initial" animate="animate" className="text-red-500">
-                    {animate("  Prachanda Rana ", variants)}
+                    {animate(" Praful Shrestha ", variants)}
                 </motion.span>
                 <br />
                 I am a
