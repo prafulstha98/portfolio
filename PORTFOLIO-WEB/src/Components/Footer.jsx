@@ -4,6 +4,6 @@ const Footer = () => {
             <div style={{ textShadow: '2px 3px 5px blue' }}>All copyright &copy; reserved - Praful Shrestha</div>
         </div>
     )
-}
+} 
 
 export default Footer
